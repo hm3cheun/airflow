@@ -1,5 +1,5 @@
 # airflow
-[![CircleCI](https://circleci.com/gh/hm3cheun/airflow/tree/master.svg?style=svg)](https://circleci.com/gh/hm3cheun/airflow/tree/master)
+[![CircleCI](https://circleci.com/gh/hm3cheun/docker/tree/master.svg?style=svg)](https://circleci.com/gh/hm3cheun/docker/tree/master)
 [![Docker Build Status](https://img.shields.io/docker/build/hm3cheun/docker.svg)]()
 
 [![Docker Hub](https://img.shields.io/badge/docker-ready-blue.svg)](https://hub.docker.com/r/hm3cheun/airflow/)
