@@ -1,10 +1,10 @@
 # airflow
 [![CircleCI](https://circleci.com/gh/hm3cheun/airflow/tree/master.svg?style=svg)](https://circleci.com/gh/hm3cheun/airflow/tree/master)
-[![Docker Build Status](https://img.shields.io/docker/build/hm3cheun/airflow.svg)]()
+[![Docker Build Status](https://img.shields.io/docker/build/hm3cheun/docker.svg)]()
 
 [![Docker Hub](https://img.shields.io/badge/docker-ready-blue.svg)](https://hub.docker.com/r/hm3cheun/airflow/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/hm3cheun/airflow.svg)]()
-[![Docker Stars](https://img.shields.io/docker/stars/hm3cheun/airflow.svg)]()
+[![Docker Pulls](https://img.shields.io/docker/pulls/hm3cheun/docker.svg)]()
+[![Docker Stars](https://img.shields.io/docker/stars/hm3cheun/docker.svg)]()
 
 This repository contains **Dockerfile** of [apache-airflow](https://github.com/apache/incubator-airflow) for [Docker](https://www.docker.com/)'s [automated build](https://registry.hub.docker.com/u/hm3cheun/airflow/) published to the public [Docker Hub Registry](https://registry.hub.docker.com/).
 
@@ -19,7 +19,7 @@ This repository contains **Dockerfile** of [apache-airflow](https://github.com/a
 
 Pull the image from the Docker repository.
 
-    docker pull hm3cheun/airflow
+    docker pull hm3cheun/docker
 
 ## Build
 
@@ -38,7 +38,7 @@ Don't forget to update the airflow images in the docker-compose files to hm3cheu
 
 By default, airflow runs Airflow with **SequentialExecutor** :
 
-    docker run -d -p 8080:8080 hm3cheun/airflow webserver
+    docker run -d -p 8080:8080 hm3cheun/docker webserver
 
 If you want to run another executor, use the other docker-compose.yml files provided in this repository.
 
@@ -54,7 +54,7 @@ NB : If you want to have DAGs example loaded (default=False), you've to set the 
 
 `LOAD_EX=n`
 
-    docker run -d -p 8080:8080 -e LOAD_EX=y hm3cheun/airflow
+    docker run -d -p 8080:8080 -e LOAD_EX=y hm3cheun/docker
 
 If you want to use Ad hoc query, make sure you've configured connections:
 Go to Admin -> Connections and Edit "postgres_default" set this values (equivalent to values in airflow.cfg/docker-compose*.yml) :
@@ -111,7 +111,7 @@ This can be used to scale to a multi node setup using docker swarm.
 
 If you want to run other airflow sub-commands, such as `list_dags` or `clear` you can do so like this:
 
-    docker run --rm -ti hm3cheun/airflow airflow list_dags
+    docker run --rm -ti hm3cheun/docker airflow list_dags
 
 or with your docker-compose set up like this:
 
@@ -119,8 +119,8 @@ or with your docker-compose set up like this:
 
 You can also use this to run a bash shell or any other command in the same environment that airflow would be run in:
 
-    docker run --rm -ti hm3cheun/airflow bash
-    docker run --rm -ti hm3cheun/airflow ipython
+    docker run --rm -ti hm3cheun/docker bash
+    docker run --rm -ti hm3cheun/docker ipython
 
 # Wanna help?
 
